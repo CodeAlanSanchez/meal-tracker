@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import * as api from '../api';
 
-export const getMeals = () => async (dispatch) => {
+export const getMeals = () => async (dispatch: any) => {
   try {
     const data = await api.fetchMeals();
 
