@@ -7,10 +7,10 @@ const Tracker = () => (
   <section className="tracker">
     <div className="grid-container">
       <Sidebar />
-      <div className="flex-container">
+      <section className="data flex-container">
         <Bars />
         <Graph />
-      </div>
+      </section>
     </div>
   </section>
 );
