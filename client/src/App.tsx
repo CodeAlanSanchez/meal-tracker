@@ -11,18 +11,18 @@ import './styles.css';
 const App = () => (
   <>
     <Header />
-    <Switch>
-      <Route exact path={['/', '/home']}>
-        <Hero />
-        <main>
+    <main>
+      <Switch>
+        <Route exact path={['/', '/home']}>
+          <Hero />
           <About />
           <Contact />
-        </main>
-      </Route>
-      <Route path="/tracker">
-        <Tracker />
-      </Route>
-    </Switch>
+        </Route>
+        <Route path="/tracker">
+          <Tracker />
+        </Route>
+      </Switch>
+    </main>
     <Footer />
   </>
 );
