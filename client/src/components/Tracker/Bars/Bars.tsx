@@ -4,6 +4,7 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const Bars = () => (
   <section className="bars tracker-container">
+    <h1 className="data-header">Summary</h1>
     <div className="flex-container">
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />

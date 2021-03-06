@@ -1,6 +1,5 @@
 import React from 'react';
 import Bars from './Bars/Bars';
-import Graph from './Graph/Graph';
 import Sidebar from './Sidebar/Sidebar';
 
 const Tracker = () => (
@@ -9,7 +8,6 @@ const Tracker = () => (
       <Sidebar />
       <section className="data flex-container">
         <Bars />
-        <Graph />
       </section>
     </div>
   </section>
