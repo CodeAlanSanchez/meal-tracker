@@ -1,5 +1,6 @@
 import React from 'react';
 import Bars from './Bars/Bars';
+import MealList from './Meals/MealList/MealList';
 import Sidebar from './Sidebar/Sidebar';
 
 const Tracker = () => (
@@ -9,6 +10,7 @@ const Tracker = () => (
       <section className="data flex-container">
         <Bars />
       </section>
+      <MealList meals={[{ name: 'henry', description: 'noble man' }]} />
     </div>
   </section>
 );
