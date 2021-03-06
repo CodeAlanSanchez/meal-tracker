@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import Tracker from './components/Tracker/Tracker';
 import './styles.css';
 import Home from './components/Home/Home';
+import Account from './components/Account/Account';
 
 const App = () => (
   <>
@@ -16,6 +17,9 @@ const App = () => (
         </Route>
         <Route path="/tracker">
           <Tracker />
+        </Route>
+        <Route path="/account">
+          <Account />
         </Route>
       </Switch>
     </main>
