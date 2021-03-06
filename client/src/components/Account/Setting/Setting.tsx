@@ -5,7 +5,7 @@ import React from 'react';
 const Setting = ({ name, currentValue, macro = false }:
   {name: string, currentValue: Number, macro: boolean}) => (
     <div className="setting">
-      <h2>{name}</h2>
+      <p>{name}</p>
       {!macro ? <input type="text" placeholder={currentValue.toString()} id={name} />
         : <input type="text" placeholder={`${currentValue.toString()}g`} id={name} />}
 

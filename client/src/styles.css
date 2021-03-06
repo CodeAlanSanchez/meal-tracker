@@ -41,19 +41,26 @@ body {
 }
 
 h1 {
-  font-size: 4.8rem;
+  font-size: 7.2rem;
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 5.6rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 3.6rem;
 }
 
 p, a {
   font-size: 2.4rem;
+  font-weight: 400;
+}
+
+button, textarea, input {
+  font-size: 2.4rem;
+  min-width: 0;
+  width: 100%;
 }
 
 a {
@@ -77,12 +84,37 @@ input, textarea {
   border: none;
   border-radius: 5px;
   padding: 10px 10px;
-  font-size: 2.4rem;
   background: #eeeeee;
   resize: none;
+  margin: 10px 0;
+  min-width: 0;
 }
 
-button:focus, input:focus, textarea:focus {
+textarea {
+  height: 300px;
+}
+
+button {
+  margin: 20px 0;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #7A93D2;
+  cursor: pointer;
+  height: 50px;
+  padding: 0 10%;
+}
+
+button:hover {
+  background-color: #68f5ff;
+}
+
+button:focus {
+  background-color: #bdf89f;
+}
+
+input:focus, textarea:focus {
   box-shadow: 0 0 0 2px #7A93D2;
   background: #eeeeee;
   outline: none;
@@ -91,7 +123,6 @@ button:focus, input:focus, textarea:focus {
 
 .flex-container {
   display: flex;
-  flex-flow: column nowrap;
 }
 
 .grid-container {
@@ -111,7 +142,12 @@ header {
   width: 100%;
 }
 
+nav {
+  height: 100%;
+}
+
 nav ul {
+  height: 100%;
   display: flex;
   list-style-type: none;
   align-items: center;
@@ -127,7 +163,6 @@ nav ul {
 
 .meal-in a {
   font-family: "Pacifico", cursive;
-  font-size: 3.6rem;
 }
 
 .search {
@@ -156,42 +191,7 @@ nav ul {
 }
 
 .hero .heading {
-  width: 700px;
-}
-
-.hero img {
-  position: relative;
-  width: 15%;
-  margin-right: 200px;
-}
-
-.hero h1 {
-  font-size: 8.6rem;
-}
-
-.hero p {
-  font-size: 4.8rem;
-}
-
-button {
-  margin: 20px 0;
-  padding: 20px 55px;
-  border: none;
-  border-radius: 10px;
-  color: #ffffff;
-  font-size: 3.2rem;
-  width: max-content;
-  font-weight: 700;
-  background-color: #7A93D2;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #68f5ff;
-}
-
-button:focus {
-  background-color: #bdf89f;
+  margin: auto auto auto 5%;
 }
 
 /* About */
@@ -209,7 +209,7 @@ button:focus {
 }
 
 .about-item {
-  margin: 50px 0;
+  margin: 25px 0;
   text-align: center;
 }
 
@@ -217,12 +217,7 @@ button:focus {
   width: 30%;
 }
 
-.about-item h1 {
-  font-size: 3.6rem;
-}
-
 .about-item p {
-  font-size: 2.4rem;
   font-weight: 500;
   width: 50%;
 }
@@ -230,7 +225,6 @@ button:focus {
 .about-item.flex-container {
   flex-flow: column nowrap;
   align-items: center;
-  width: 33%;
 }
 
 /* Contact */
@@ -241,7 +235,6 @@ button:focus {
 }
 
 .contact h1 {
-  font-size: 7.2rem;
   text-align: center;
   margin: 2% 0;
 }
@@ -251,7 +244,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 100px 100px;
+  padding: 100px 1%;
 }
 
 form.grid-container {
@@ -261,10 +254,14 @@ form.grid-container {
     "subject subject"
     "body body";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 7fr;
-  grid-gap: 20px;
-  gap: 20px;
+  gap: 10px;
+  grid-gap: 10px;
   width: 100%;
+}
+
+form.grid-container > input, form.grid-container textarea {
+  display: inline-block;
+  min-width: 0;
 }
 
 .first {
@@ -291,25 +288,27 @@ form.grid-container {
 
 .tracker {
   padding: 20px;
+  height: 100%;
 }
 
 .tracker-container {
   background: #dddddd;
+  padding: auto;
 }
 
 .tracker .grid-container {
   grid-template-areas: 
-  "sidebar bars"
-  "sidebar bars"
-  "sidebar graph";
+    "sidebar bars"
+    "sidebar bars"
+    "sidebar graph";
   grid-template-columns: .2fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: max-content 1fr;
   grid-gap: 20px;
   gap: 20px;
 }
 
 .data-header {
-  margin: auto 0 auto 10px;
+  text-align: center;
 }
 
 /* Sidebar */
@@ -317,7 +316,6 @@ form.grid-container {
 .sidebar {
   grid-area: sidebar;
   width: 100%;
-  /* margin: 20px 0 20px 20px; */
 }
 
 .sidebar {
@@ -347,8 +345,23 @@ form.grid-container {
   margin: 0 auto;
 }
 
-/* Graph */
+/* Meals */
 
+.meal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+  grid-auto-rows: 1fr;
+  width: 100%;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.meal {
+  padding: 25px;
+  height: 100%;
+  background: #eee;
+  color: #444;
+}
 
 /* Account */
 
@@ -358,19 +371,15 @@ form.grid-container {
 
 .account h1 {
   font-weight: 500;
-  font-size: 7.2rem;
-  color: #565656;
-  display: inline-block;
 }
 
-.account h2 {
-  font-weight: 500;
-  font-size: 5.6rem;
+.account h3 {
+  color: #999;
+  font-weight: 300;
 }
 
 .account p {
   font-weight: 500;
-  margin: 0 0 50px;
 }
 
 .guest-container {
@@ -390,7 +399,6 @@ form.grid-container {
 }
 
 .setting h2 {
-  font-size: 2.8rem;
   color: #000;
   background: #fff;
   font-weight: 500;
@@ -409,17 +417,52 @@ form.grid-container {
 /* Footer */
 
 footer {
+  width: 100%;
   grid-area: footer;
   color: #fff;
   background-color: #0a0a0a;
 }
 
+footer h2 {
+  word-wrap: break-word;
+}
+
 @media only screen and (max-width: 1300px) {
-  .hero img {
+
+  h1 {
+    font-size: 5.6rem;
+  }
+
+  h2 {
+    font-size: 3.6rem;
+  }
+
+  p, a {
+    font-size: 2.4rem;
+  }
+
+  button {
+    font-size: 2.4rem;
+  }
+
+  input, textarea {
+    font-size: 2rem;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .nav-item {
     display: none;
   }
-  .hero .heading {
-    margin: 0 70px;
+
+  .meal-in {
+    display: inline-block;
+  }
+
+  .hero img {
+    display: none;
   }
 
   .hero .flex-container {
@@ -429,6 +472,27 @@ footer {
   .account {
     margin: 50px auto;
     width: 100%;
+  }
+
+  form.grid-container {
+    grid-template-areas: 
+      "first"
+      "last"
+      "email"
+      "subject"
+      "body";
+    grid-template-columns: 1fr;
+    gap: 10px;
+    grid-gap: 10px;
+  }
+
+  .tracker .grid-container {
+    grid-template-areas: 
+      "bars"
+      "sidebar"
+      "graph";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
@@ -443,8 +507,8 @@ footer {
     grid-template-rows: 126px minmax(100vh, max-content) 500px;
   }
 
-  button {
-    font-size: 5.4rem;
+  html {
+    font-size: 135%;
   }
 
   input {
@@ -458,11 +522,11 @@ footer {
   }
 
   .nav-item a {
-    font-size: 5.4rem;
+    /* font-size: 5.4rem; */
   }
 
   .meal-in a {
-    font-size: 7.2rem;
+    /* font-size: 7.2rem; */
   }
 
   /* Hero */
@@ -481,21 +545,21 @@ footer {
   }
 
   .hero h1 {
-    font-size: 14.4rem;
+    /* font-size: 14.4rem; */
   }
 
   .hero p {
-    font-size: 8.6rem;
+    /* font-size: 8.6rem; */
   }
 
   /* About */
 
   .about-item h1 {
-    font-size: 7.2rem;
+    /* font-size: 7.2rem; */
   }
 
   .about-item p {
-    font-size: 4.8rem;
+    /* font-size: 4.8rem; */
   }
 
   /* Contact */
@@ -505,10 +569,10 @@ footer {
   }
 
   .contact h1 {
-    font-size: 14.4rem;
+    /* font-size: 14.4rem; */
   }
 
   form input, form textarea {
-    font-size: 5.4rem;
+    /* font-size: 5.4rem; */
   }
 }

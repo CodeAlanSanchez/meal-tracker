@@ -7,10 +7,8 @@ const Tracker = () => (
   <section className="tracker">
     <div className="grid-container">
       <Sidebar />
-      <section className="data flex-container">
-        <Bars />
-      </section>
-      <MealList meals={[{ name: 'henry', description: 'noble man' }]} />
+      <Bars />
+      <MealList meals={[{ name: 'henry', description: 'noble man' }, { name: 'alex', description: 'education' }]} />
     </div>
   </section>
 );

@@ -4,7 +4,7 @@ import Setting from './Setting/Setting';
 const Account = () => (
   <section className="account">
     <h1>Account Settings</h1>
-    <p>Change daily goals</p>
+    <h3>Change daily goals</h3>
     <div className="settings">
       <form action="">
         <Setting name="Calories" currentValue={2800} macro={false} />

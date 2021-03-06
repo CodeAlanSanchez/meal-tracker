@@ -4,27 +4,27 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const Bars = () => (
   <section className="bars tracker-container">
-    <h1 className="data-header">Summary</h1>
+    <h2 className="data-header">Summary</h2>
     <div className="flex-container">
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h2>Calories</h2>
+        <h3>Calories</h3>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h2>Protein</h2>
+        <h3>Protein</h3>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h2>Carbohydrates</h2>
+        <h3>Carbohydrates</h3>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h2>Fats</h2>
+        <h3>Fats</h3>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h2>Fiber</h2>
+        <h3>Fiber</h3>
       </div>
     </div>
   </section>
