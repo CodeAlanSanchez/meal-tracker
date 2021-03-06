@@ -183,6 +183,21 @@ nav ul {
   #bdf89f;
 }
 
+.hero h1 {
+  font-size: 8.4rem;
+}
+
+.hero p {
+  font-size: 6.4rem;
+}
+
+.hero button {
+  font-size: 3.6rem;
+  width: 300px;
+  height: 80px;
+  padding: 0;
+}
+
 .hero .flex-container {
   flex-flow: row wrap;
   align-items: center;
@@ -191,7 +206,8 @@ nav ul {
 }
 
 .hero .heading {
-  margin: auto auto auto 5%;
+  margin: 15% auto auto 5%;
+  width: 50%;
 }
 
 /* About */
@@ -240,7 +256,7 @@ nav ul {
 }
 
 .contact .flex-container {
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -363,6 +379,11 @@ form.grid-container > input, form.grid-container textarea {
   color: #444;
 }
 
+.meal input {
+  background: #fff;
+  border: 1px solid #333;
+}
+
 /* Account */
 
 .account {
@@ -449,16 +470,24 @@ footer h2 {
     font-size: 2rem;
   }
 
-  .heading {
-    text-align: center;
-  }
-
-  .nav-item {
-    display: none;
-  }
-
   .meal-in {
     display: inline-block;
+  }
+
+
+  .hero h1 {
+    font-size: 5.6rem;
+  }
+
+  .hero p {
+    font-size: 2.4rem;
+  }
+
+  .hero button {
+    font-size: 2.4rem;
+    width: 200px;
+    height: 50px;
+    padding: 0;
   }
 
   .hero img {
@@ -507,26 +536,39 @@ footer h2 {
     grid-template-rows: 126px minmax(100vh, max-content) 500px;
   }
 
-  html {
-    font-size: 135%;
+  h1 {
+    font-size: 8.6rem;
   }
 
-  input {
+  h2 {
+    font-size: 6.4rem;
+  }
+
+  h3 {
+    font-size: 5.4rem;
+  }
+
+  p, a {
+    font-size: 4.8rem;
+  }
+
+  button, input {
     height: 80px;
+    font-size: 3.6rem;
+  }
+
+  textarea {
+    font-size: 3.6rem;
+  }
+
+  .CircularProgressbar {
+    width: 300px
   }
 
   /* Navbar */
 
   .nav-item {
     margin: 0 50px;
-  }
-
-  .nav-item a {
-    /* font-size: 5.4rem; */
-  }
-
-  .meal-in a {
-    /* font-size: 7.2rem; */
   }
 
   /* Hero */
@@ -544,35 +586,8 @@ footer h2 {
     width: 15%;
   }
 
-  .hero h1 {
-    /* font-size: 14.4rem; */
-  }
-
-  .hero p {
-    /* font-size: 8.6rem; */
-  }
-
-  /* About */
-
-  .about-item h1 {
-    /* font-size: 7.2rem; */
-  }
-
-  .about-item p {
-    /* font-size: 4.8rem; */
-  }
-
-  /* Contact */
-
   .contact {
     height: 70vh;
   }
 
-  .contact h1 {
-    /* font-size: 14.4rem; */
-  }
-
-  form input, form textarea {
-    /* font-size: 5.4rem; */
-  }
 }

@@ -8,23 +8,23 @@ const Bars = () => (
     <div className="flex-container">
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h3>Calories</h3>
+        <p>Calories</p>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h3>Protein</h3>
+        <p>Protein</p>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h3>Carbohydrates</h3>
+        <p>Carbohydrates</p>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h3>Fats</h3>
+        <p>Fats</p>
       </div>
       <div className="bar flex-container">
         <CircularProgressbar value={5} maxValue={15} text="33%" strokeWidth={15} styles={buildStyles({ strokeLinecap: 'butt' })} />
-        <h3>Fiber</h3>
+        <p>Fiber</p>
       </div>
     </div>
   </section>
