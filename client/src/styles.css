@@ -256,11 +256,12 @@ button:focus {
 
 form.grid-container {
   grid-template-areas: 
-    "first last"
-    "email subject"
+    "first first"
+    "last email"
+    "subject subject"
     "body body";
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 7fr;
+  grid-template-rows: 1fr 1fr 1fr 7fr;
   grid-gap: 20px;
   gap: 20px;
   width: 100%;
@@ -328,13 +329,21 @@ form.grid-container {
 
 .bars .flex-container {
   flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.bar.flex-container {
+  text-align: center;
+  flex-flow: column nowrap;
+  padding: 20px;
+}
+
+.CircularProgressbar {
+  width: 150px;
+  margin: 0 auto;
 }
 
 /* Graph */
-
-.graph {
-  /* margin: 20px 0 0; */
-}
 
 /* Footer */
 
