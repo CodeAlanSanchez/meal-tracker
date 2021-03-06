@@ -77,7 +77,7 @@ input, textarea {
   border: none;
   border-radius: 5px;
   padding: 10px 10px;
-  font-size: 2.4wrem;
+  font-size: 2.4rem;
   background: #eeeeee;
   resize: none;
 }
@@ -308,6 +308,10 @@ form.grid-container {
   gap: 20px;
 }
 
+.data-header {
+  margin: auto 0 auto 10px;
+}
+
 /* Sidebar */
 
 .sidebar {
@@ -345,6 +349,63 @@ form.grid-container {
 
 /* Graph */
 
+
+/* Account */
+
+.account {
+  margin: 50px 10%;
+}
+
+.account h1 {
+  font-weight: 500;
+  font-size: 7.2rem;
+  color: #565656;
+  display: inline-block;
+}
+
+.account h2 {
+  font-weight: 500;
+  font-size: 5.6rem;
+}
+
+.account p {
+  font-weight: 500;
+  margin: 0 0 50px;
+}
+
+.guest-container {
+  margin: 50px 0;
+  width: max-content;
+}
+
+/* Setting */
+
+.settings {
+  width: max-content;
+}
+
+.setting {
+  width: max-content;
+  margin: 25px 0;
+}
+
+.setting h2 {
+  font-size: 2.8rem;
+  color: #000;
+  background: #fff;
+  font-weight: 500;
+}
+
+.setting input {
+  color: #fff;
+  font-weight: 400;
+  border-radius: 15px;
+  width: 230px;
+  background: #312F31;
+  height: 50px;
+  padding: 0 8%;
+}
+
 /* Footer */
 
 footer {
@@ -363,6 +424,11 @@ footer {
 
   .hero .flex-container {
     justify-content: start;
+  }
+
+  .account {
+    margin: 50px auto;
+    width: 100%;
   }
 }
 
