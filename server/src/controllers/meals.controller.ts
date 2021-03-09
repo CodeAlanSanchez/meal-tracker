@@ -15,6 +15,19 @@ export const getMeals = async (req: Request, res: Response) => {
   }
 };
 
+export const getMeal = async (req: Request, res: Response) => {
+  try {
+    const { id: _id } = req.params;
+
+    if (!mongoose.Types.ObjectId.isValid(_id)) return res.status(404).send('No meal with that id');
+    const meal = await Meal.findById(_id);
+
+    res.status(200).json(meal);
+  } catch (error) {
+    res.status(409).json({ error });
+  }
+};
+
 export const createMeal = async (req: Request, res: Response) => {
   const meal = req.body;
 

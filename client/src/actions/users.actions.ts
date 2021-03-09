@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import * as api from '../api';
 
-export const getMeals = () => async (dispatch: any) => {
+export const getUsers = () => async (dispatch: any) => {
   try {
-    const data = await api.fetchMeals();
+    const data = await api.fetchUsers();
 
     dispatch({ type: 'FETCH_ALL', payload: data });
   } catch (error) {
