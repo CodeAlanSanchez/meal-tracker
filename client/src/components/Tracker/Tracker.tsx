@@ -8,7 +8,7 @@ const Tracker = () => (
     <div className="grid-container">
       <Sidebar />
       <Bars />
-      <MealList meals={[{ name: 'henry', description: 'noble man' }, { name: 'alex', description: 'education' }]} />
+      <MealList meals={[{ name: 'henry', description: 'noble man', _id: 1 }, { name: 'alex', description: 'education', _id: 2 }]} />
     </div>
   </section>
 );

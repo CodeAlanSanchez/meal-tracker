@@ -8,7 +8,6 @@ const Setting = ({ name, currentValue, macro = false }:
       <p>{name}</p>
       {!macro ? <input type="text" placeholder={currentValue.toString()} id={name} />
         : <input type="text" placeholder={`${currentValue.toString()}g`} id={name} />}
-
     </div>
 );
 

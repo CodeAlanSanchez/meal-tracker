@@ -1,11 +1,12 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import Meal from '../Meal/Meal';
-import MealAdder from '../MealAdder.tsx/MealAdder';
+import MealAdder from '../MealAdder/MealAdder';
 
-const MealList = ({ meals }: {meals: {name: string, description: string}[]}) => (
+const MealList = ({ meals }: any) => (
   <section className="meal-list tracker-container">
-    {meals.map((meal: {name: string, description: string}) => <Meal meal={meal} />)}
+    {meals.map((meal: any) => <Meal key={meal._id} meal={meal} />)}
     <MealAdder />
   </section>
 );
