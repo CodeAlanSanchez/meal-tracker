@@ -1,26 +1,26 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import User from './user.model';
+import { IUser } from './user.model';
 
 export interface IMeal extends Document {
-  name: String;
-  description: String;
-  calories: Number;
-  protein: Number;
-  carbs: Number;
-  fat: Number;
-  fiber: Number;
-  user: any;
+  name: string;
+  description: string;
+  calories: number;
+  protein: number;
+  carbs: number;
+  fat: number;
+  fiber: number;
+  user: IUser['_id'];
 }
 
 const mealSchema: Schema = new Schema({
-  name: String,
-  description: String,
-  calories: Number,
-  protein: Number,
-  carbs: Number,
-  fat: Number,
-  fiber: Number,
-  user: User.schema,
+  name: { type: String, required: true },
+  description: { type: String, required: false },
+  calories: { type: Number, required: false },
+  protein: { type: Number, required: false },
+  carbs: { type: Number, required: false },
+  fat: { type: Number, required: false },
+  fiber: { type: Number, required: false },
+  user: { type: Schema.Types.ObjectId, required: true },
 });
 
 const Meal = mongoose.model<IMeal>('Meal', mealSchema);

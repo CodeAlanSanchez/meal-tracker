@@ -1,33 +1,35 @@
 import mongoose, { Schema, Document } from 'mongoose';
+import { IMeal } from './meal.model';
 
 export interface IUser extends Document {
-  name: String;
+  name: string;
   creationDate: Date;
-  calorieGoal: Number;
-  proteinGoal: Number;
-  carbGoal: Number;
-  fatGoal: Number;
-  fiberGoal: Number;
+  calorieGoal: number;
+  proteinGoal: number;
+  carbGoal: number;
+  fatGoal: number;
+  fiberGoal: number;
   meals: {
-    id: Number,
-    date: Date,
+    meal: IMeal['_id'];
+    date: Date;
   }[],
 }
 
 const userSchema: Schema = new Schema({
-  name: String,
+  name: { type: String, required: true },
   creationDate: {
     type: Date,
     default: Date.now(),
+    required: true,
   },
-  calorieGoal: Number,
-  proteinGoal: Number,
-  carbGoal: Number,
-  fatGoal: Number,
-  fiberGoal: Number,
+  calorieGoal: { type: Number, required: false },
+  proteinGoal: { type: Number, required: false },
+  carbGoal: { type: Number, required: false },
+  fatGoal: { type: Number, required: false },
+  fiberGoal: { type: Number, required: false },
   meals: [{
-    id: Number,
-    date: { type: Date, default: Date.now() },
+    meal: { type: Schema.Types.ObjectId, required: true },
+    date: { type: Date, default: Date.now(), required: true },
   }],
 });
 
