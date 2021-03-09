@@ -2,7 +2,7 @@ import express from 'express';
 
 import {
   getMeals, createMeal, deleteMeal, updateMeal,
-} from '../controllers/meal';
+} from '../controllers/meals.controller';
 
 const router = express.Router();
 

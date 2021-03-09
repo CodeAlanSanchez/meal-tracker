@@ -1,22 +1,25 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable consistent-return */
-import mongoose from 'mongoose';
-import Meal from '../models/mealModel';
+import { Request, Response } from 'express';
+import Meal from '../models/meal.model';
 
-export const getMeals = async (req, res) => {
+const mongoose = require('mongoose');
+
+export const getMeals = async (req: Request, res: Response) => {
   try {
-    const meals = Meal.find();
+    const meals = await Meal.find();
 
     res.status(200).json(meals);
   } catch (error) {
-    res.status(404).json({ error });
+    res.status(404).json({ message: error.message });
   }
 };
 
-export const createMeal = async (req, res) => {
+export const createMeal = async (req: Request, res: Response) => {
   const meal = req.body;
 
   const newMeal = new Meal(meal);
+
   try {
     await newMeal.save();
 
@@ -26,7 +29,7 @@ export const createMeal = async (req, res) => {
   }
 };
 
-export const deleteMeal = async (req, res) => {
+export const deleteMeal = async (req: Request, res: Response) => {
   try {
     const { id: _id } = req.params;
 
@@ -40,7 +43,7 @@ export const deleteMeal = async (req, res) => {
   }
 };
 
-export const updateMeal = async (req, res) => {
+export const updateMeal = async (req: Request, res: Response) => {
   try {
     const { id: _id } = req.params;
     const meal = req.body;

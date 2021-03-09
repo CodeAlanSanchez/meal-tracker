@@ -1,9 +1,10 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable consistent-return */
+import { Request, Response } from 'express';
 import mongoose from 'mongoose';
-import User from '../models/userModel';
+import User from '../models/user.model';
 
-export const getUsers = async (req, res) => {
+export const getUsers = async (req: Request, res: Response) => {
   try {
     const users = User.find();
 
@@ -13,7 +14,7 @@ export const getUsers = async (req, res) => {
   }
 };
 
-export const createUser = async (req, res) => {
+export const createUser = async (req: Request, res: Response) => {
   const user = req.body;
 
   const newUser = new User(user);
@@ -26,7 +27,7 @@ export const createUser = async (req, res) => {
   }
 };
 
-export const deleteUser = async (req, res) => {
+export const deleteUser = async (req: Request, res: Response) => {
   try {
     const { id: _id } = req.params;
 
@@ -40,7 +41,7 @@ export const deleteUser = async (req, res) => {
   }
 };
 
-export const updateUser = async (req, res) => {
+export const updateUser = async (req: Request, res: Response) => {
   try {
     const { id: _id } = req.params;
     const user = req.body;
