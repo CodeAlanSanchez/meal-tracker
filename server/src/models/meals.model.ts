@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { IUser } from './user.model';
+import { IUser } from './users.model';
 
 export interface IMeal extends Document {
   name: string;

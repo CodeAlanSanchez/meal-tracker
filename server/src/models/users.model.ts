@@ -1,5 +1,5 @@
 import mongoose, { Schema, Document } from 'mongoose';
-import { IMeal } from './meal.model';
+import { IMeal } from './meals.model';
 
 export interface IUser extends Document {
   name: string;
@@ -30,6 +30,7 @@ const userSchema: Schema = new Schema({
   meals: [{
     meal: { type: Schema.Types.ObjectId, required: true },
     date: { type: Date, default: Date.now(), required: true },
+    required: false,
   }],
 });
 

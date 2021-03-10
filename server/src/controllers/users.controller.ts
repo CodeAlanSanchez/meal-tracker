@@ -2,7 +2,7 @@
 /* eslint-disable consistent-return */
 import { Request, Response } from 'express';
 import mongoose from 'mongoose';
-import User from '../models/user.model';
+import User from '../models/users.model';
 
 export const getUsers = async (req: Request, res: Response) => {
   try {

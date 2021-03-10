@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable consistent-return */
 import { Request, Response } from 'express';
-import Meal from '../models/meal.model';
+import Meal from '../models/meals.model';
 
 const mongoose = require('mongoose');
 
