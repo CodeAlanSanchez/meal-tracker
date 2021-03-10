@@ -2,7 +2,7 @@
 export const mealsReducer = (state = [], action: any) => {
   switch (action.type) {
     case 'FETCH_ALL':
-      return [...state, action.payload];
+      return action.payload;
     case 'CREATE':
       return [...state, action.payload];
     default:
