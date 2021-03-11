@@ -6,11 +6,11 @@ import User from '../models/users.model';
 
 export const getUsers = async (req: Request, res: Response) => {
   try {
-    const users = User.find();
+    const users = await User.find();
 
     res.status(200).json(users);
   } catch (error) {
-    res.status(404).json({ error });
+    res.status(404).json(error.message);
   }
 };
 
