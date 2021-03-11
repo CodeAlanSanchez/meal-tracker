@@ -6,7 +6,7 @@ import MealAdder from '../MealAdder/MealAdder';
 
 const MealList = ({ meals }: any) => (
   <section className="meal-list tracker-container">
-    {meals.map((meal: any) => <Meal key={meal._id} meal={meal} />)}
+    {meals ? meals.map((meal: any) => <Meal key={meal._id} meal={meal} />) : <h1>Loading...</h1>}
     <MealAdder />
   </section>
 );
