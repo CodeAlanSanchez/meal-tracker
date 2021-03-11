@@ -52,6 +52,10 @@ h3 {
   font-size: 3.6rem;
 }
 
+h4 {
+  font-size: 2.8rem;
+}
+
 p, a {
   font-size: 2.4rem;
   font-weight: 400;
@@ -73,7 +77,7 @@ a:visited {
 }
 
 a:hover {
-  color: #68f5ff;
+  color: #8eaeff;
 }
 
 img {
@@ -88,6 +92,12 @@ input, textarea {
   resize: none;
   margin: 10px 0;
   min-width: 0;
+  width: 100%;
+}
+
+form {
+  min-width: 0;
+  max-width: 1200px;
 }
 
 textarea {
@@ -107,11 +117,12 @@ button {
 }
 
 button:hover {
-  background-color: #68f5ff;
+  background-color: #8eaeff;
 }
 
 button:focus {
-  background-color: #bdf89f;
+  border: solid 2px #7A93D2;
+  background-color: #8eaeff;
 }
 
 input:focus, textarea:focus {
@@ -131,6 +142,18 @@ input:focus, textarea:focus {
 
 main {
   grid-area: main;
+}
+
+.link {
+  color: #000;
+}
+
+.link:hover {
+  color: #7A93D2;
+}
+
+section {
+  width: 100%;
 }
 
 /* Navbar */
@@ -154,6 +177,7 @@ nav ul {
 }
 
 .nav-item {
+  color: #fff;
   margin: 0 25px;
 }
 
@@ -161,8 +185,9 @@ nav ul {
   margin-left: auto;
 }
 
-.meal-in a {
+.meal-in a h2 {
   font-family: "Pacifico", cursive;
+  font-size: 3.6rem;
 }
 
 .search {
@@ -435,6 +460,14 @@ form.grid-container > input, form.grid-container textarea {
   padding: 0 8%;
 }
 
+/* Register */
+
+.register .flex-container {
+  flex-flow: column nowrap;
+  width: 600px;
+  margin: 200px auto;
+}
+
 /* Footer */
 
 footer {
@@ -523,6 +556,12 @@ footer h2 {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
   }
+
+  .register .flex-container {
+    flex-flow: column nowrap;
+    width: 250px;
+  }
+
 }
 
 @media only screen and (min-width: 2560px) {
