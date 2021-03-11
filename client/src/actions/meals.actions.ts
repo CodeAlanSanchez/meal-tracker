@@ -3,22 +3,20 @@ import * as api from '../api';
 
 export const getMeals = () => async (dispatch: any) => {
   try {
-    const data = await api.fetchMeals();
+    const { data } = await api.fetchMeals();
 
-    dispatch({ type: 'FETCH_ALL', payload: data });
+    dispatch({ type: 'FETCH_MEALS', payload: data });
   } catch (error) {
     console.error(error);
   }
 };
 
-// export const getMeal = () => async (dispatch: any)
-
 export const createMeal = (meal: any) => async (dispatch: any) => {
   try {
-    const data = await api.createMeal(meal);
+    const { data } = await api.createMeal(meal);
 
     dispatch({ type: 'CREATE', payload: data });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
