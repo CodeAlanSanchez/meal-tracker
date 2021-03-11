@@ -5,7 +5,7 @@ export const getUser = () => async (dispatch: any) => {
   try {
     const { data } = await api.fetchUser('1');
 
-    dispatch({ type: 'FETCH_USERS', payload: data });
+    dispatch({ type: 'FETCH_USER', payload: data });
   } catch (error) {
     console.error(error);
   }

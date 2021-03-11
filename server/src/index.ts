@@ -35,5 +35,5 @@ mongoose.connect(CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: tr
 mongoose.set('useFindAndModify', false);
 
 app.use('/', (req: any, res: any) => {
-  res.send('/');
+  res.send('');
 });

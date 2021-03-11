@@ -13,6 +13,7 @@ export interface IUser extends Document {
     meal: IMeal['_id'];
     date: Date;
   }[],
+  password: string,
 }
 
 const userSchema: Schema = new Schema({
@@ -32,6 +33,7 @@ const userSchema: Schema = new Schema({
     date: { type: Date, default: Date.now(), required: true },
     required: false,
   }],
+  password: { type: String, required: false },
 });
 
 const User = mongoose.model<IUser>('User', userSchema);

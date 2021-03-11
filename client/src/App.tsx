@@ -8,14 +8,14 @@ import './styles.css';
 import Home from './components/Home/Home';
 import Account from './components/Account/Account';
 import { getMeals } from './actions/meals.actions';
-import { getUser } from './actions/user.actions';
+import Register from './components/Account/Authentication/Register';
+import LogIn from './components/Account/Authentication/LogIn';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMeals());
-    dispatch(getUser());
   }, [dispatch]);
 
   return (
@@ -31,6 +31,12 @@ const App = () => {
           </Route>
           <Route path="/account">
             <Account />
+          </Route>
+          <Route path="/register">
+            <Register />
+          </Route>
+          <Route path="/login">
+            <LogIn />
           </Route>
         </Switch>
       </main>
