@@ -1,9 +1,9 @@
 /* eslint-disable import/prefer-default-export */
 import * as api from '../api';
 
-export const getUsers = () => async (dispatch: any) => {
+export const getUser = () => async (dispatch: any) => {
   try {
-    const { data } = await api.fetchUsers();
+    const { data } = await api.fetchUser('1');
 
     dispatch({ type: 'FETCH_USERS', payload: data });
   } catch (error) {

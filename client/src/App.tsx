@@ -8,14 +8,14 @@ import './styles.css';
 import Home from './components/Home/Home';
 import Account from './components/Account/Account';
 import { getMeals } from './actions/meals.actions';
-import { getUsers } from './actions/users.actions';
+import { getUser } from './actions/user.actions';
 
 const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMeals());
-    dispatch(getUsers());
+    dispatch(getUser());
   }, [dispatch]);
 
   return (
