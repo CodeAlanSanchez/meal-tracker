@@ -152,6 +152,10 @@ main {
   color: #7A93D2;
 }
 
+.error {
+  color: #ff3300;
+}
+
 section {
   width: 100%;
 }
