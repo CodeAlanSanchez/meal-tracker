@@ -2,7 +2,8 @@ import mongoose, { Schema, Document } from 'mongoose';
 import { IMeal } from './meals.model';
 
 export interface IUser extends Document {
-  name: string;
+  username: string;
+  password: string,
   creationDate: Date;
   calorieGoal: number;
   proteinGoal: number;
@@ -13,11 +14,11 @@ export interface IUser extends Document {
     meal: IMeal['_id'];
     date: Date;
   }[],
-  password: string,
 }
 
 const userSchema: Schema = new Schema({
-  name: { type: String, required: true },
+  username: { type: String, required: true },
+  password: { type: String, required: true },
   creationDate: {
     type: Date,
     default: Date.now(),
@@ -33,7 +34,6 @@ const userSchema: Schema = new Schema({
     date: { type: Date, default: Date.now(), required: true },
     required: false,
   }],
-  password: { type: String, required: false },
 });
 
 const User = mongoose.model<IUser>('User', userSchema);
